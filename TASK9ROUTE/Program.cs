@@ -57,8 +57,6 @@
             // A static class contains static members and belongs to the class itself.
             // No, we cannot create an object from a static class.
 
-            #endregion#region Q3 Static Members
-
             // a) What is a static field, and how is it different from an instance field?
             // A static field belongs to the class and is shared between all objects.
             // An instance field belongs to each object separately.
@@ -75,7 +73,23 @@
             // A static class contains static members and belongs to the class itself.
             // No, we cannot create an object from a static class.
 
-#endregion
+            #endregion
+            #region Q4 Extension Methods
+
+            // a) What is an Extension Method?
+            // An Extension Method is a method that adds new functionality
+            // to an existing class without modifying the original class.
+
+            // b) What keyword must be used in the first parameter of an extension method?
+            // The "this" keyword.
+
+            // c) Where must an extension method be declared?
+            // It must be declared inside a static class.
+
+            // d) Can an extension method access private members of the class it extends?
+            // No, it cannot directly access private members of the class.
+
+            #endregion
         }
     }
 }
