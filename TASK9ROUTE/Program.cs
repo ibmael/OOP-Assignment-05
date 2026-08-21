@@ -18,6 +18,27 @@
             // Copying a reference makes two variables point to the same object.
 
             #endregion
+            #region Q2 Shallow Copy vs Deep Copy
+
+            // a) What is a Shallow Copy?
+            // A Shallow Copy creates a new object,
+            // but reference-type members still point to the same objects.
+
+            // b) What is a Deep Copy?
+            // A Deep Copy creates a new object
+            // and also creates new copies of its reference-type members.
+
+            // c) What happens to reference-type members when a Shallow Copy is created?
+            // They are shared between the original object and the copied object.
+
+            // d) What happens to reference-type members when a Deep Copy is created?
+            // New independent copies of the reference-type members are created.
+
+            // e) Give one situation where Deep Copy would be safer than Shallow Copy.
+            // Deep Copy is safer when we need to modify the copied object's data
+            // without affecting the original object's data.
+
+            #endregion
         }
     }
 }
