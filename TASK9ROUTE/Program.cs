@@ -39,6 +39,43 @@
             // without affecting the original object's data.
 
             #endregion
+            #region Q3 Static Members
+
+            // a) What is a static field, and how is it different from an instance field?
+            // A static field belongs to the class and is shared between all objects.
+            // An instance field belongs to each object separately.
+
+            // b) What is a static method? Can a static method directly access instance members?
+            // A static method belongs to the class, not to a specific object.
+            // No, it cannot directly access instance members.
+
+            // c) What is a static constructor, and when is it executed?
+            // A static constructor is used to initialize static members.
+            // It is executed automatically once before the class is used for the first time.
+
+            // d) What is a static class? Can you create an object from a static class?
+            // A static class contains static members and belongs to the class itself.
+            // No, we cannot create an object from a static class.
+
+            #endregion#region Q3 Static Members
+
+            // a) What is a static field, and how is it different from an instance field?
+            // A static field belongs to the class and is shared between all objects.
+            // An instance field belongs to each object separately.
+
+            // b) What is a static method? Can a static method directly access instance members?
+            // A static method belongs to the class, not to a specific object.
+            // No, it cannot directly access instance members.
+
+            // c) What is a static constructor, and when is it executed?
+            // A static constructor is used to initialize static members.
+            // It is executed automatically once before the class is used for the first time.
+
+            // d) What is a static class? Can you create an object from a static class?
+            // A static class contains static members and belongs to the class itself.
+            // No, we cannot create an object from a static class.
+
+#endregion
         }
     }
 }
