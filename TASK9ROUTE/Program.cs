@@ -90,6 +90,24 @@
             // No, it cannot directly access private members of the class.
 
             #endregion
+            #region Q5 Partial Classes and Partial Methods
+
+            // a) What is a Partial Class?
+            // A Partial Class is a class that can be split into multiple files
+            // using the "partial" keyword.
+
+            // b) Why would a developer split one class into multiple files?
+            // To organize the code and make large classes easier to read and maintain.
+
+            // c) What is a Partial Method?
+            // A Partial Method is a method that is declared in one part
+            // of a partial class and can be implemented in another part.
+
+            // d) What happens if a declared partial method has no implementation?
+            // If the partial method has no implementation, the compiler removes
+            // the declaration and its calls.
+
+            #endregion
         }
     }
 }
