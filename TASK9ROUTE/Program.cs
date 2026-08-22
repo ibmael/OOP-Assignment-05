@@ -139,6 +139,30 @@
             Console.WriteLine($"Same Object After Copy : {ReferenceEquals(shipment1, shipment3)}");
 
             #endregion
+
+            #region Part 02 - Q2 Shallow Copy
+
+            Console.WriteLine("------------------------------------------");
+            Console.WriteLine("Shallow Copy");
+            Console.WriteLine("------------------------------------------");
+
+            Shipment shallowCopy = shipment1.ShallowCopy();
+
+            Console.WriteLine($"Original Shipment Address : {shipment1.Destination.City}");
+            Console.WriteLine($"Copied Shipment Address : {shallowCopy.Destination.City}");
+
+            Console.WriteLine("Changing copied shipment address...");
+
+            shallowCopy.Destination.City = "Giza";
+
+            Console.WriteLine($"Original Shipment Address : {shipment1.Destination.City}");
+            Console.WriteLine($"Copied Shipment Address : {shallowCopy.Destination.City}");
+
+            Console.WriteLine($"Same Shipment Object : {ReferenceEquals(shipment1, shallowCopy)}");
+
+            Console.WriteLine($"Same DeliveryAddress Object : {ReferenceEquals(shipment1.Destination, shallowCopy.Destination)}");
+
+            #endregion
         }
     }
 }

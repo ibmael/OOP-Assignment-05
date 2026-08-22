@@ -47,5 +47,14 @@ namespace TASK9ROUTE
         }
 
         #endregion
+
+        #region Shallow Copy
+
+        public Shipment ShallowCopy()
+        {
+            return (Shipment)this.MemberwiseClone();
+        }
+
+        #endregion
     }
 }
