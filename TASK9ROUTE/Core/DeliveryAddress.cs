@@ -8,8 +8,8 @@ namespace TASK9ROUTE
     {
         #region Properties
 
-        public string City { get; set; }
-        public string Street { get; set; }
+        public string City { get; set; } = string.Empty;
+        public string Street { get; set; } = string.Empty;
         public int BuildingNumber { get; set; }
 
         #endregion

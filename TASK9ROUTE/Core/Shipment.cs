@@ -12,6 +12,25 @@ namespace TASK9ROUTE
 
         #endregion
 
+        #region Static Constructor
+
+        static Shipment()
+        {
+            TotalShipmentsCreated = 0;
+            Console.WriteLine("Shipment System Initialized");
+        }
+
+        #endregion
+
+        #region Static Method
+
+        public static int GetTotalShipmentsCreated()
+        {
+            return TotalShipmentsCreated;
+        }
+
+        #endregion
+
         #region Properties
 
         public string TrackingCode { get; set; }

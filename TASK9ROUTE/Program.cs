@@ -190,6 +190,8 @@
             );
 
             #endregion
+
+            Console.WriteLine($"Total Shipments Created : {Shipment.GetTotalShipmentsCreated()}");
         }
     }
 }
