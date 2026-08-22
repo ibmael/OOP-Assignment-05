@@ -99,5 +99,14 @@ namespace TASK9ROUTE
         }
 
         #endregion
+
+        #region Partial Method Implementation
+
+        partial void OnTrackingStatusChanged(string newStatus)
+        {
+            Console.WriteLine($"Tracking status changed to: {newStatus}");
+        }
+
+        #endregion
     }
 }

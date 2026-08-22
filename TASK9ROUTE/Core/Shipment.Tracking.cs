@@ -18,7 +18,15 @@ namespace TASK9ROUTE
         public void UpdateTrackingStatus(string newStatus)
         {
             TrackingStatus = newStatus;
+
+            OnTrackingStatusChanged(newStatus);
         }
+
+        #endregion
+
+        #region Partial Method Declaration
+
+        partial void OnTrackingStatusChanged(string newStatus);
 
         #endregion
     }

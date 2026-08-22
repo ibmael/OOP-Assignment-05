@@ -206,6 +206,16 @@
             );
 
             #endregion
+
+            #region Part 02 - Q10 Partial Method
+
+            DeliveryUtilities.PrintSeparator();
+            Console.WriteLine("Partial Method");
+            DeliveryUtilities.PrintSeparator();
+
+            shipment1.UpdateTrackingStatus("Delivered");
+
+            #endregion
         }
     }
 }
