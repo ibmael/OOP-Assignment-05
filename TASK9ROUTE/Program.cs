@@ -108,6 +108,37 @@
             // the declaration and its calls.
 
             #endregion
+            //--- Part Two ---
+            #region Part 02 - Q1 Object Copying
+
+            DeliveryAddress address = new DeliveryAddress(
+                "Cairo",
+                "Nasr City",
+                10
+            );
+
+            Shipment shipment1 = new StandardShipment(
+                "SH001",
+                "Laptop",
+                3,
+                50,
+                address
+            );
+
+            Shipment shipment2 = shipment1;
+
+            Console.WriteLine("Object Copying");
+            Console.WriteLine($"Original Shipment : {shipment1.TrackingCode}");
+            Console.WriteLine($"Assigned Shipment : {shipment2.TrackingCode}");
+
+            Console.WriteLine($"Same Object : {ReferenceEquals(shipment1, shipment2)}");
+
+            Shipment shipment3 = shipment1.CopyShipment();
+
+            Console.WriteLine($"Copied Shipment : {shipment3.TrackingCode}");
+            Console.WriteLine($"Same Object After Copy : {ReferenceEquals(shipment1, shipment3)}");
+
+            #endregion
         }
     }
 }
