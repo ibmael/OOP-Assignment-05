@@ -163,6 +163,33 @@
             Console.WriteLine($"Same DeliveryAddress Object : {ReferenceEquals(shipment1.Destination, shallowCopy.Destination)}");
 
             #endregion
+
+            #region Part 02 - Q3 Deep Copy
+
+            Console.WriteLine("------------------------------------------");
+            Console.WriteLine("Deep Copy");
+            Console.WriteLine("------------------------------------------");
+
+            // Reset original address after the Shallow Copy demonstration
+            shipment1.Destination.City = "Cairo";
+
+            Shipment deepCopy = shipment1.DeepCopy();
+
+            Console.WriteLine($"Original Shipment Address : {shipment1.Destination.City}");
+            Console.WriteLine($"Copied Shipment Address : {deepCopy.Destination.City}");
+
+            Console.WriteLine("Changing copied shipment address...");
+
+            deepCopy.Destination.City = "Giza";
+
+            Console.WriteLine($"Original Shipment Address : {shipment1.Destination.City}");
+            Console.WriteLine($"Copied Shipment Address : {deepCopy.Destination.City}");
+
+            Console.WriteLine(
+                $"Same DeliveryAddress Object : {ReferenceEquals(shipment1.Destination, deepCopy.Destination)}"
+            );
+
+            #endregion
         }
     }
 }
