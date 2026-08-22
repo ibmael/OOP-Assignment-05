@@ -6,6 +6,12 @@ namespace TASK9ROUTE
 {
     internal abstract partial class Shipment
     {
+        #region Static Field
+
+        public static int TotalShipmentsCreated;
+
+        #endregion
+
         #region Properties
 
         public string TrackingCode { get; set; }
@@ -27,6 +33,7 @@ namespace TASK9ROUTE
             Weight = weight;
             DeliveryFee = deliveryFee;
             Destination = destination;
+            TotalShipmentsCreated++;
         }
 
         #endregion
