@@ -1,0 +1,112 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace TASK9ROUTE
+{
+    internal abstract partial class Shipment
+    {
+        #region Static Field
+
+        public static int TotalShipmentsCreated;
+
+        #endregion
+
+        #region Static Constructor
+
+        static Shipment()
+        {
+            TotalShipmentsCreated = 0;
+            Console.WriteLine("Shipment System Initialized");
+        }
+
+        #endregion
+
+        #region Static Method
+
+        public static int GetTotalShipmentsCreated()
+        {
+            return TotalShipmentsCreated;
+        }
+
+        #endregion
+
+        #region Properties
+
+        public string TrackingCode { get; set; }
+        public string Description { get; set; }
+        public decimal Weight { get; set; }
+        public decimal DeliveryFee { get; set; }
+        public DeliveryAddress Destination { get; set; }
+
+        #endregion
+
+        #region Constructor
+
+        public Shipment(string trackingCode, string description,
+                        decimal weight, decimal deliveryFee,
+                        DeliveryAddress destination)
+        {
+            TrackingCode = trackingCode;
+            Description = description;
+            Weight = weight;
+            DeliveryFee = deliveryFee;
+            Destination = destination;
+            TotalShipmentsCreated++;
+        }
+
+        #endregion
+
+        #region Abstract Members
+
+        public abstract decimal EstimatedCost { get; }
+
+        public abstract void PrintShipment();
+
+        #endregion
+
+        #region Object Copying
+
+        public Shipment CopyShipment()
+        {
+            return (Shipment)this.MemberwiseClone();
+        }
+
+        #endregion
+
+        #region Shallow Copy
+
+        public Shipment ShallowCopy()
+        {
+            return (Shipment)this.MemberwiseClone();
+        }
+
+        #endregion
+
+        #region Deep Copy
+
+        public Shipment DeepCopy()
+        {
+            Shipment copy = (Shipment)this.MemberwiseClone();
+
+            copy.Destination = new DeliveryAddress(
+                this.Destination.City,
+                this.Destination.Street,
+                this.Destination.BuildingNumber
+            );
+
+            return copy;
+        }
+
+        #endregion
+
+        #region Partial Method Implementation
+
+        partial void OnTrackingStatusChanged(string newStatus)
+        {
+            Console.WriteLine($"Tracking status changed to: {newStatus}");
+        }
+
+        #endregion
+    }
+}
