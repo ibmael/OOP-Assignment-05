@@ -192,6 +192,20 @@
             #endregion
 
             Console.WriteLine($"Total Shipments Created : {Shipment.GetTotalShipmentsCreated()}");
+
+            #region Part 02 - Q7 Static Class
+
+            Console.WriteLine();
+            Console.WriteLine("Static Utilities");
+
+            DeliveryUtilities.PrintSeparator();
+            DeliveryUtilities.PrintSystemTitle();
+
+            Console.WriteLine(
+                $"Total Shipments Created : {Shipment.GetTotalShipmentsCreated()}"
+            );
+
+            #endregion
         }
     }
 }
